@@ -5,5 +5,16 @@
 <h2>How it Works...</h2>
 
 <ul>
-  <li></li>
+  <li>Click on a question to view respective answers.</li>
+  <li>Have differnt answer? Click on new answer to update it.</li>
+  <li>Click on the Ask Question tab to ask a new question.</li>
+
 </ul>
+<h2>Questions</h2>
+<hr>
+{{outlet}}
+<ol>
+  {{#each model as |question|}}
+     <li>{{questions.owner}} {{questions.image}}</li>
+  {{/each}}
+</ol>
