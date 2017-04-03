@@ -2,8 +2,19 @@
 
 <p>Welcome to our Question and Answer message board</p>
 
-<h2>How it Works...</h2>
+<div class="container">
+  <div class="col-md-4 description">
+    <div class="jumbotron">
+      <h3>How it Works...</h3>
+      <ul>
+        <li>Click on the Answer button to view the answers.</li>
+        <li>Don't agree the listed answers? click new answer to enter yours.</li>
+        <li>Click on add new tab to ask a new question</li>
+      </ul>
+    </div>
+  </div>
 
+<!-- <<<<<<< HEAD
 <ul>
   <li>Click on a question to view respective answers.</li>
   <li>Have differnt answer? Click on new answer to update it.</li>
@@ -18,3 +29,15 @@
      <li>{{questions.owner}} {{questions.image}}</li>
   {{/each}}
 </ol>
+======= -->
+  <div class="col-md-8 questions">
+    <h2>Questions...</h2>
+    <ol>
+      {{#each model as |question|}}
+      {{question-tile question=question}}
+      {{/each}}
+    </ol>
+
+  </div>
+</div>
+>>>>>>> gh-pages

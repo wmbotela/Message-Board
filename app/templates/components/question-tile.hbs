@@ -1,0 +1,8 @@
+<li>
+{{question.question}} {{question.author}}
+{{#if isAnswerShowing}}
+  <p{{action 'answerHide'}}>Blah blah blah  </p>
+{{else}}
+<button {{action 'answerShow'}}>Answers</button>
+{{/if}}
+</li>

@@ -6,8 +6,15 @@ import Ember from 'ember';
   }];
 
 export default Ember.Route.extend({
+<<<<<<< HEAD
   model() {
     return questions;
   },
 
+=======
+
+  model() {
+    return this.store.findAll('question');
+  },
+>>>>>>> gh-pages
 });
