@@ -25,5 +25,12 @@
 
     {{new-question saveQuestion="saveQuestion"}}
 
-  </div>
+    <ul>
+    {{#each model.answer as |answer|}}
+      <li>{{answer.rating}} - {{answer.content}} - by {{answer.author}}</li>
+    {{/each}}
+  </ul>
+
+</div>
+
 </div>

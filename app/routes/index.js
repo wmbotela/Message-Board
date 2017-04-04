@@ -4,6 +4,7 @@ export default Ember.Route.extend({
 
   model() {
     return this.store.findAll('question');
+    return this.store.findAll('answer');
   },
 
   action: {
