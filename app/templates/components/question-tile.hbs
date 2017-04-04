@@ -1,8 +1,9 @@
 <li>
-{{question.question}} {{question.author}}
+{{#link-to 'question' question.id}} {{question.question}} {{question.author}}{{/link-to}}
 {{#if isAnswerShowing}}
   <p{{action 'answerHide'}}>Blah blah blah  </p>
 {{else}}
 <button {{action 'answerShow'}}>Answers</button>
 {{/if}}
+
 </li>

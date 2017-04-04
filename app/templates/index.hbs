@@ -19,9 +19,11 @@
     <h2>Questions...</h2>
     <ol>
       {{#each model as |question|}}
-      {{question-tile question=question}}
+      {{question-tile question=question }}
       {{/each}}
     </ol>
+
+    {{new-question saveQuestion="saveQuestion"}}
 
   </div>
 </div>
