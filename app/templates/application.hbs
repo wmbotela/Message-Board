@@ -3,14 +3,14 @@
     <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse">
-              <span class>icon-bar</span>
-              <span class>icon-bar</span>
-              <span class>icon-bar</span>
+              <div><span class>icon-bar</span></div>
+              <div><span class>icon-bar</span></div>
+              <div><span class>icon-bar</span></div>
           </button>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
+            <li>{{#link-to 'index'}}Home{{/link-to}}</li>
           </ul>
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">

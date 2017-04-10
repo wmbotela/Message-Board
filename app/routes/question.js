@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    update(question,param) {
+    update(question,params) {
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined){
           question.set(key,params[key]);
@@ -23,7 +23,7 @@ export default Ember.Route.extend({
       newAnswer.save().then(function() {
         return question.save();
       });
-      this.transitionTo('question', question);
+      this.transitionTo('question', params.question);
     }
   }
 

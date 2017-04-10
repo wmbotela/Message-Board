@@ -10,6 +10,6 @@ export default Ember.Component.extend({
     answerHide: function(){
       this.set('isAnswerShowing',false);
     },
-    
+
   }
 });

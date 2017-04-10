@@ -1,7 +1,4 @@
 {{outlet}}
-
-<p>Welcome to our Question and Answer message board</p>
-
 <div class="container">
   <div class="col-md-4 description">
     <div class="jumbotron">
@@ -14,23 +11,23 @@
     </div>
   </div>
 
-
   <div class="col-md-8 questions">
-    <h2>Questions...</h2>
-    <ol>
-      {{#each model.questions as |question|}}
-      {{question-tile question=question }}
+      <h2>Questions...</h2>
+      <ol>
+        {{#each model.questions as |question|}}
+        {{question-tile question=question }}
+        {{/each}}
+      </ol>
+      <!-- <ul>
+      {{#each model.answer as |answer|}}
+        <li>{{answer.content}} - by {{answer.author}} {{answer.rating}}</li>
       {{/each}}
-    </ol>
-
-    {{new-question saveQuestion="saveQuestion"}}
-
-    <ul>
-    {{#each model.answer as |answer|}}
-      <li>{{answer.rating}} - {{answer.content}} - by {{answer.author}}</li>
-    {{/each}}
-  </ul>
+    </ul> -->
+  </div>
 
 </div>
-
+<nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="newq">
+  {{new-question saveQuestion="saveQuestion"}}
 </div>
+</nav>

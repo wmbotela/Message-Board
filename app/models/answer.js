@@ -4,6 +4,6 @@ export default DS.Model.extend({
 
   author: DS.attr(),
   rating: DS.attr(),
-  content: DS.attr(),
+  answer: DS.attr(),
   question: DS.belongsTo('question', { async: true }),
 });

@@ -1,5 +1,15 @@
-<h2>{{model.question}} {{model.author}}</h2>
 
-{{update-question question=model update="update"}}
-{{new-answer saveAnswer="saveAnswer" question=model}}
-<!-- {{question-detail question=model}} -->
+<div class="container">
+
+  <h3>{{model.question}} -by- {{model.author}}</h3>
+
+  {{#each model.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
+
+  <hr>
+  <!-- {{update-question question=model update="update"}} -->
+  {{new-answer saveAnswer="saveAnswer" question=model}}
+  <!-- {{question-detail question=model}} -->
+
+</div>

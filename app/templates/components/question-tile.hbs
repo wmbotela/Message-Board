@@ -1,8 +1,8 @@
 <li>
-  
-{{#link-to 'question' question.id}} {{question.question}} {{question.author}}{{/link-to}}
+
+{{#link-to 'question' question.id}} {{question.question}} by <span>{{question.author}}</span>{{/link-to}}
 {{#if isAnswerShowing}}
-  <p{{action 'answerHide'}}>Blah blah blah  </p>
+   <p{{action 'answerHide'}}>{{#link-to answer.answer }}{{/link-to}} <!-- {{answer.rating}} - {{answer.answer}} - by {{answer.author}} --></p>
 {{else}}
 <button {{action 'answerShow'}}>Answers</button>
 {{/if}}
